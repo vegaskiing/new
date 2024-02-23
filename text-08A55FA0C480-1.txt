@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baby Prediction Game Form</title>
+</head>
+<body>
+    <h2>Baby Prediction Game</h2>
+    <form id="predictionForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        
+        <label for="birthdate">Exact Birth Date (MM/DD/YYYY):</label><br>
+        <input type="text" id="birthdate" name="birthdate"><br>
+        
+        <label for="birthtime">Birth Time:</label><br>
+        <input type="text" id="birthtime" name="birthtime"><br>
+        
+        <label for="weight">Baby's Weight:</label><br>
+        <input type="text" id="weight" name="weight"><br>
+        
+        <label for="length">Baby's Length:</label><br>
+        <input type="text" id="length" name="length"><br>
+        
+        <label for="firstnameletter">First Letter of the Name:</label><br>
+        <input type="text" id="firstnameletter" name="firstnameletter"><br>
+        
+        <label for="haircolor">Hair Color:</label><br>
+        <input type="text" id="haircolor" name="haircolor"><br>
+        
+        <input type="button" value="Submit" onclick="submitForm()">
+    </form> 
+
+    <script>
+        function submitForm() {
+            // For demonstration, we're just showing an alert with the form data.
+            // In a real application, you would send this data to a server.
+            var formData = {
+                name: document.getElementById('name').value,
+                birthdate: document.getElementById('birthdate').value,
+                birthtime: document.getElementById('birthtime').value,
+                weight: document.getElementById('weight').value,
+                length: document.getElementById('length').value,
+                firstnameletter: document.getElementById('firstnameletter').value,
+                haircolor: document.getElementById('haircolor').value
+            };
+            
+            alert("Form Submitted! " + JSON.stringify(formData));
+            // Here, you would typically use AJAX or fetch API to send the formData to your server.
+        }
+    </script>
+</body>
+</html>
